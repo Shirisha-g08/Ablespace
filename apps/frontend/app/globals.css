@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4efe8;
+  --bg-alt: #f8f4ef;
+  --card: #fffdfa;
+  --panel: #f1e7d8;
+  --text: #2f2419;
+  --muted: #796250;
+  --border: #dcc8b0;
+  --accent: #cf6b2f;
+  --accent-foreground: #fffaf4;
+  --success: #2f8b57;
+  --warning: #b87714;
+  --danger: #c74637;
+}
+
+:root[data-theme="night"] {
+  --bg: #101723;
+  --bg-alt: #161f2f;
+  --card: #1c2638;
+  --panel: #223049;
+  --text: #e7edf8;
+  --muted: #9eabc3;
+  --border: #2f3f5d;
+  --accent: #4ea5ff;
+  --accent-foreground: #081321;
+  --success: #60cf8d;
+  --warning: #ffc24d;
+  --danger: #ff7f7f;
+}
+
+:root[data-theme="meadow"] {
+  --bg: #edf4e9;
+  --bg-alt: #f5fbf2;
+  --card: #fcfffb;
+  --panel: #ddedd5;
+  --text: #1f3324;
+  --muted: #5b7862;
+  --border: #bfd7c3;
+  --accent: #2f8b57;
+  --accent-foreground: #effcf4;
+  --success: #2f8b57;
+  --warning: #af8a25;
+  --danger: #c74d4d;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at -20% -20%, rgba(255, 255, 255, 0.5), transparent),
+    linear-gradient(160deg, var(--bg), var(--bg-alt));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.glass {
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  backdrop-filter: blur(8px);
+}
